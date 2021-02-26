@@ -25,8 +25,6 @@ Modify [the existing code](https://github.com/psan2/fe-interview/blob/master/src
 
 The rules of Checkers are available [here](https://www.wikihow.com/Play-Checkers).
 
-![Screenshot](https://github.com/psan2/fe-interview/blob/master/screenshot.png)
-
 ## Troubleshooting
 
 _Note: This is an incomplete list of errors. Feel free to make a pull request or add an issue if you run across any bugs or issues_.
