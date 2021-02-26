@@ -1,10 +1,10 @@
 {
-  "name": "front-end-interview",
-  "version": "1.0.0",
+  "name": "fe-interview",
+  "version": "2.0.0",
   "description": "Front-End Interview Exercises",
   "main": "index.js",
-  "repository": "https://github.com/Intelight/front-end-interview",
-  "author": "Q-Free/Intelight",
+  "repository": "https://github.com/psan2/fe-interview",
+  "author": "Pat Santucci, Alex Yuly",
   "license": "UNLICENSED",
   "scripts": {
     "start": "webpack-dev-server --open"

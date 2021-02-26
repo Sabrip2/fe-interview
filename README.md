@@ -4,16 +4,16 @@ Front-End Interview Exercises
 
 ## First, Do This
 
-1. Make sure you have [Git](https://www.git-scm.com/) `>= 2.13.2`, [Node.js](https://nodejs.org/en/) `>= 8.6.0` and [Yarn package manager](https://yarnpkg.com/lang/en/) installed on your computer.
+1. Make sure you have [Git](https://www.git-scm.com/) `>= 2.13.2`, [Node.js](https://nodejs.org/en/) `>= 8.6.0` and [NPM package manager](https://www.npmjs.com/) installed on your computer.
 1. Fork and clone this repository locally.
-1. Run `yarn install` to install all the dependencies.
-1. Run `yarn start` to start the app in a new browser window (http://localhost:8080/). Each time you save changes to a file, the browser will reload with those changes.
+1. Run `npm install` to install all the dependencies.
+1. Run `npm run start` to start the app in a new browser window (http://localhost:8080/). Each time you save changes to a file, the browser will reload with those changes.
 
 ### Checkers
 
 You are given a React app that renders a Checkers board.
 
-Modify [the existing code](https://github.com/psan2/fe-interview//blob/master/src/index.js#L105) to create a functional Checkers game, by implementing these user requirements:
+Modify [the existing code](https://github.com/psan2/fe-interview/blob/master/src/index.js) to create a functional Checkers game, by implementing these user requirements:
 
 1. As a user, I want to move any piece to any space it is allowed to go, so that the board is correctly updated as a result of that move.
    1. If a piece is captured, it is removed from the board.
