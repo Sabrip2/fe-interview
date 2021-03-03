@@ -183,7 +183,7 @@ const CheckersBoard = ({ size }) => {
     if (
       board[x][y] != 2 &&
       x + 1 < board.length &&
-      x - 1 >= 0 &&
+      y - 1 >= 0 &&
       y + 1 < board.length
     ) {
       if (board[x + 1][y - 1] == 0 || board[x + 1][y + 1] == 0) {
