@@ -25,6 +25,7 @@ const CheckersBoard = ({ size }) => {
 
   const handleClickCircle = (row, column) => {
     let selected = board[column][row];
+    // checks correct piece is selected
     if (selected > 2) {
       selected = Math.floor(selected / 2);
     }
@@ -32,6 +33,7 @@ const CheckersBoard = ({ size }) => {
       alert("It is not your turn to move");
       return;
     }
+    // checks if in middle of double or tripple jump
     if (doubleJump && row != xPrev && column != yPrev) {
       alert("You must double jump");
       return;
@@ -41,6 +43,7 @@ const CheckersBoard = ({ size }) => {
     hasMoves(column, row);
   };
 
+  // moves piece at x1 y2 to x2 y2
   function move(x1, y1, x2, y2) {
     let copy = [...board];
     let temp = copy[y1][x1];
@@ -51,12 +54,15 @@ const CheckersBoard = ({ size }) => {
     reset();
   }
 
+  // resets values and switches current player
   function reset() {
     setX(-1);
     setY(-1);
     checkWin();
     setPlayer(curPlayer == 1 ? 2 : 1);
   }
+
+  // checks if piece at x,y needs to be kinged
   function checkKing(x, y) {
     if (curPlayer == 1) {
       if (y == board.length - 1) {
@@ -73,6 +79,7 @@ const CheckersBoard = ({ size }) => {
     }
   }
 
+  // preforms jump
   function jump(x1, y1, x2, y2) {
     let midy = (y1 + y2) / 2;
     let midx = (x1 + x2) / 2;
@@ -94,6 +101,7 @@ const CheckersBoard = ({ size }) => {
     }
   }
 
+  // checks for win state
   function checkWin() {
     var opponent = curPlayer == 1 ? 2 : 1;
     // check if captured all the pieces
@@ -116,6 +124,8 @@ const CheckersBoard = ({ size }) => {
       alert("Player " + curPlayer + " has won");
     }
   }
+
+  // checks if piece is allowed to jump over other piece
   function canJumpOver(over, under) {
     if ((over == 1 || over == 3) && (under == 2 || under == 4)) {
       return true;
@@ -124,6 +134,8 @@ const CheckersBoard = ({ size }) => {
     }
     return false;
   }
+
+  // returns true piece can jump
   function canJump(x, y) {
     // check pieces that can jump up (1,3,4)
     var selected = board[x][y];
